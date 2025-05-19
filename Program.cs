@@ -143,3 +143,29 @@ int flip = coin.Next(1,3);
 Console.WriteLine((flip > 1) ? "Heads" : "Tails");  //ternary operator
 
 //===============================================
+
+bool flag = true;
+int value;
+
+if (flag)
+{
+    value = 10;
+    //Console.WriteLine($"Inside the code block: {value}");
+}
+
+// Console.WriteLine($"Outside the code block: {value}");
+
+//===============================================
+
+int[] numbers = { 4, 8, 15, 16, 23, 42 };
+int total = 0;
+foreach (int number in numbers)
+{
+    total += number;
+}
+
+if(numbers.Contains(42)) Console.WriteLine("Set contains 42");
+Console.WriteLine($"Total: {total}");
+
+//===============================================
+
