@@ -144,14 +144,14 @@ Console.WriteLine((flip > 1) ? "Heads" : "Tails");  //ternary operator
 
 //===============================================
 
-bool flag = true;
-int value;
+// bool flag = true;
+// int value;
 
-if (flag)
-{
-    value = 10;
-    //Console.WriteLine($"Inside the code block: {value}");
-}
+// if (flag)
+// {
+//     value = 10;
+//     //Console.WriteLine($"Inside the code block: {value}");
+// }
 
 // Console.WriteLine($"Outside the code block: {value}");
 
@@ -169,3 +169,138 @@ Console.WriteLine($"Total: {total}");
 
 //===============================================
 
+int employeeLevel = 200;
+string employeeName = "John Smith";
+
+string title = "";
+
+switch (employeeLevel)
+{
+    case 100:
+        title = "Junior Associate";
+        break;
+    case 200:
+        title = "Senior Associate";
+        break;
+    case 300:
+        title = "Manager";
+        break;
+    case 400:
+        title = "Senior Manager";
+        break;
+    default:
+        title = "Associate";
+        break;
+}
+
+Console.WriteLine($"{employeeName}, {title}");
+
+//===============================================
+
+string sku = "01-MN-L";
+
+string[] product = sku.Split('-');
+
+string type = "";
+string color = "";
+string size = "";
+
+switch(product[0])
+{
+    case "01":
+        type = "Sweat shirt";
+        break;
+    case "02":
+        type = "T-Shirt";
+        break;
+    case "03":
+        type = "Sweat pants";
+        break;
+    default:
+        type = "Other";
+        break;
+}
+
+switch(product[1])
+{
+    case "BL":
+        color = "Black";
+        break;
+    case "MN":
+        color = "Maroon";
+        break;
+    default:
+        color = "White";
+        break;
+}
+
+switch(product[2])
+{
+    case "S":
+        size = "Small";
+        break;
+    case "M":
+        size = "Medium";
+        break;
+    case "L":
+        size = "Large";
+        break;
+    default:
+        size = "One Size Fits All";
+        break;
+}
+
+// Console.WriteLine($"Product: {size} {color} {type}");
+
+//===============================================
+
+// for (int i = 0; i < 10; i++)
+// {
+//     Console.WriteLine(i);
+// }
+
+// string[] names = { "Alex", "Eddie", "David", "Michael" };
+// for (int i = names.Length - 1; i >= 0; i--)
+// {
+//     Console.WriteLine(names[i]);
+// }
+
+//===============================================
+
+// for(int i = 0; i<40; i++)
+// {
+//     if(i % 5 == 0 && i % 3 == 0) Console.WriteLine(" - fizzbuzz");
+
+//     else if(i%5 == 0) Console.WriteLine(" - buzz");
+
+//     else if(i%3 == 0) Console.WriteLine(" - fizz");
+// }
+
+//===============================================
+
+Random random = new Random();
+int current = 0;
+
+do
+{
+    current = random.Next(1, 11);
+    Console.WriteLine(current);
+} while (current != 7); // keep logging until you hit 7
+
+//===============================================
+
+// the ourAnimals array will store the following: 
+string animalSpecies = "";
+string animalID = "";
+string animalAge = "";
+string animalPhysicalDescription = "";
+string animalPersonalityDescription = "";
+string animalNickname = "";
+
+// variables that support data entry
+int maxPets = 8;
+string? readResult;
+string menuSelection = "";
+
+// array used to store runtime data, there is no persisted data
+string[,] ourAnimals = new string[maxPets, 6];
