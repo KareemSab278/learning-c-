@@ -1,306 +1,356 @@
-﻿using System;
+﻿// using System;
 
-//Console.WriteLine("Hello, World!");
-//===============================================
-//Random dice = new(); // using the Random method to create the dice object from the random class 
-//int roll = dice.Next(1, 7); // roll is the random number between 1 and 6.
+// //Console.WriteLine("Hello, World!");
+// //===============================================
+// //Random dice = new(); // using the Random method to create the dice object from the random class 
+// //int roll = dice.Next(1, 7); // roll is the random number between 1 and 6.
 
-//int roll1 = dice.Next();
-//int roll2 = dice.Next(101);
-//int roll3 = dice.Next(50, 101);
+// //int roll1 = dice.Next();
+// //int roll2 = dice.Next(101);
+// //int roll3 = dice.Next(50, 101);
 
-//Console.WriteLine(roll);
-//Console.WriteLine($"First roll: {roll1}");
-//Console.WriteLine($"Second roll: {roll2}");
-//Console.WriteLine($"Third roll: {roll3}");
+// //Console.WriteLine(roll);
+// //Console.WriteLine($"First roll: {roll1}");
+// //Console.WriteLine($"Second roll: {roll2}");
+// //Console.WriteLine($"Third roll: {roll3}");
 
-//int roll4 = dice.Next(100);
-//String roll4string = roll4.ToString();
-//Console.WriteLine($"Fourth roll: {roll4string}");
+// //int roll4 = dice.Next(100);
+// //String roll4string = roll4.ToString();
+// //Console.WriteLine($"Fourth roll: {roll4string}");
 
-//===============================================
+// //===============================================
 
-//int firstValue = 500;
-//int secondValue = 600;
-//int largerValue = Math.Max(firstValue, secondValue);
+// //int firstValue = 500;
+// //int secondValue = 600;
+// //int largerValue = Math.Max(firstValue, secondValue);
 
-//Console.WriteLine(largerValue);
+// //Console.WriteLine(largerValue);
 
-//int total = roll1 + roll2 + roll3 + roll4;
+// //int total = roll1 + roll2 + roll3 + roll4;
 
-//===============================================
+// //===============================================
 
-//if (total > 14)
-//{
-//    Console.WriteLine("You win!");
-//}
+// //if (total > 14)
+// //{
+// //    Console.WriteLine("You win!");
+// //}
 
-//if (total < 15)
-//{
-//    Console.WriteLine("Sorry, you lose.");
-//}
+// //if (total < 15)
+// //{
+// //    Console.WriteLine("Sorry, you lose.");
+// //}
 
-//===============================================
+// //===============================================
 
-//string message = "The quick brown fox jumps over the lazy dog.";
-//bool result = message.Contains("dog");
-//Console.WriteLine(result);
+// //string message = "The quick brown fox jumps over the lazy dog.";
+// //bool result = message.Contains("dog");
+// //Console.WriteLine(result);
 
-//if (message.Contains("fox")){
-//    Console.WriteLine("What does the fox say?");
-//    Console.Write("Awoo?");
-//}
-//else
-//{
-//    Console.WriteLine("The fox is not here.");
-//}
+// //if (message.Contains("fox")){
+// //    Console.WriteLine("What does the fox say?");
+// //    Console.Write("Awoo?");
+// //}
+// //else
+// //{
+// //    Console.WriteLine("The fox is not here.");
+// //}
 
-//===============================================
+// //===============================================
 
-//string[] fraudulentOrderIDs = new string[3];
+// //string[] fraudulentOrderIDs = new string[3];
 
-//fraudulentOrderIDs[0] = "A123";
-//fraudulentOrderIDs[1] = "B456";
-//fraudulentOrderIDs[2] = "C789";
+// //fraudulentOrderIDs[0] = "A123";
+// //fraudulentOrderIDs[1] = "B456";
+// //fraudulentOrderIDs[2] = "C789";
 
-//string[] fraudulentOrderIDs = ["A123", "B456", "C789"];
+// //string[] fraudulentOrderIDs = ["A123", "B456", "C789"];
 
-//foreach (string item in fraudulentOrderIDs)
-//{
-//    Console.WriteLine(item);
-//}
+// //foreach (string item in fraudulentOrderIDs)
+// //{
+// //    Console.WriteLine(item);
+// //}
 
-//===============================================
+// //===============================================
 
-//int[] inventory = { 200, 450, 700, 175, 250 };
-//int totalInventory = 0;
+// //int[] inventory = { 200, 450, 700, 175, 250 };
+// //int totalInventory = 0;
 
-//foreach (int number in inventory)
-//{
-//    totalInventory += number;
-//}
-//Console.WriteLine($"Total inventory: {totalInventory}");
+// //foreach (int number in inventory)
+// //{
+// //    totalInventory += number;
+// //}
+// //Console.WriteLine($"Total inventory: {totalInventory}");
 
-//===============================================
+// //===============================================
 
-//string[] orderIDs = { "B123", "C234", "A345", "C15", "B177", "G3003", "C235", "B179" };
+// //string[] orderIDs = { "B123", "C234", "A345", "C15", "B177", "G3003", "C235", "B179" };
 
-//foreach (string orderID in orderIDs)
-//{
-//    if (orderID.StartsWith("B"))
-//    {
-//        Console.WriteLine(orderID);
-//    }
-//}
+// //foreach (string orderID in orderIDs)
+// //{
+// //    if (orderID.StartsWith("B"))
+// //    {
+// //        Console.WriteLine(orderID);
+// //    }
+// //}
 
-//===============================================
+// //===============================================
 
-int[] sophia = [90, 86, 87, 98, 100];
-int[] andrew = [92, 89, 81, 96, 90];
-int[] emma = [90, 85, 87, 98, 68];
-int[] logan = [90, 95, 87, 88, 96];
+// int[] sophia = [90, 86, 87, 98, 100];
+// int[] andrew = [92, 89, 81, 96, 90];
+// int[] emma = [90, 85, 87, 98, 68];
+// int[] logan = [90, 95, 87, 88, 96];
 
-decimal emmaTotal = 0; decimal sophiaTotal = 0; decimal andrewTotal = 0; decimal loganTotal = 0;
+// decimal emmaTotal = 0; decimal sophiaTotal = 0; decimal andrewTotal = 0; decimal loganTotal = 0;
 
-int gradesCount = emma.Length;
+// int gradesCount = emma.Length;
 
-foreach (int i in Enumerable.Range(0, gradesCount))
-{
-    sophiaTotal += sophia[i];
-    andrewTotal += andrew[i];
-    emmaTotal += emma[i];
-    loganTotal += logan[i];
-}
-
-decimal[] grades = [sophiaTotal / gradesCount, andrewTotal / gradesCount, emmaTotal / gradesCount, loganTotal / gradesCount];
-string[] mark = new string[5]; //declare the array with 5 elements
-
-List <string> marks = new List<string>(); // first ever list. they seem better than arrays ngl...
-
-foreach (int i in Enumerable.Range(0, grades.Length))
-{
-    if (grades[i] > 95) marks.Add("A+");
-    else if (grades[i] > 90) marks.Add("A");
-    else if (grades[i] > 85) marks.Add("B+");
-    else if (grades[i] > 80) marks.Add("B");
-    else if (grades[i] > 75) marks.Add("C+");
-    else if (grades[i] > 70) marks.Add("C");
-    else if (grades[i] > 65) marks.Add("D+");
-    else if (grades[i] > 60) marks.Add("D");
-    else if (grades[i] < 60) marks.Add("F");
-    else marks.Add("?");
-}
-
-//Console.WriteLine($"Sophia's average: {sophiaTotal / gradesCount}, {marks[0]}");
-//Console.WriteLine($"Andrew's average: {andrewTotal / gradesCount}, {marks[1]}");
-//Console.WriteLine($"Emma's average: {emmaTotal / gradesCount}, {marks[2]}");
-//Console.WriteLine($"Logan's average: {loganTotal / gradesCount}, {marks[3]}");
-
-//===============================================
-
-Random coin = new();
-int flip = coin.Next(1,3);
-Console.WriteLine((flip > 1) ? "Heads" : "Tails");  //ternary operator
-
-//===============================================
-
-// bool flag = true;
-// int value;
-
-// if (flag)
+// foreach (int i in Enumerable.Range(0, gradesCount))
 // {
-//     value = 10;
-//     //Console.WriteLine($"Inside the code block: {value}");
+//     sophiaTotal += sophia[i];
+//     andrewTotal += andrew[i];
+//     emmaTotal += emma[i];
+//     loganTotal += logan[i];
 // }
 
-// Console.WriteLine($"Outside the code block: {value}");
+// decimal[] grades = [sophiaTotal / gradesCount, andrewTotal / gradesCount, emmaTotal / gradesCount, loganTotal / gradesCount];
+// string[] mark = new string[5]; //declare the array with 5 elements
 
-//===============================================
+// List <string> marks = new List<string>(); // first ever list. they seem better than arrays ngl...
 
-int[] numbers = { 4, 8, 15, 16, 23, 42 };
-int total = 0;
-foreach (int number in numbers)
-{
-    total += number;
-}
-
-if(numbers.Contains(42)) Console.WriteLine("Set contains 42");
-Console.WriteLine($"Total: {total}");
-
-//===============================================
-
-int employeeLevel = 200;
-string employeeName = "John Smith";
-
-string title = "";
-
-switch (employeeLevel)
-{
-    case 100:
-        title = "Junior Associate";
-        break;
-    case 200:
-        title = "Senior Associate";
-        break;
-    case 300:
-        title = "Manager";
-        break;
-    case 400:
-        title = "Senior Manager";
-        break;
-    default:
-        title = "Associate";
-        break;
-}
-
-Console.WriteLine($"{employeeName}, {title}");
-
-//===============================================
-
-string sku = "01-MN-L";
-
-string[] product = sku.Split('-');
-
-string type = "";
-string color = "";
-string size = "";
-
-switch(product[0])
-{
-    case "01":
-        type = "Sweat shirt";
-        break;
-    case "02":
-        type = "T-Shirt";
-        break;
-    case "03":
-        type = "Sweat pants";
-        break;
-    default:
-        type = "Other";
-        break;
-}
-
-switch(product[1])
-{
-    case "BL":
-        color = "Black";
-        break;
-    case "MN":
-        color = "Maroon";
-        break;
-    default:
-        color = "White";
-        break;
-}
-
-switch(product[2])
-{
-    case "S":
-        size = "Small";
-        break;
-    case "M":
-        size = "Medium";
-        break;
-    case "L":
-        size = "Large";
-        break;
-    default:
-        size = "One Size Fits All";
-        break;
-}
-
-// Console.WriteLine($"Product: {size} {color} {type}");
-
-//===============================================
-
-// for (int i = 0; i < 10; i++)
+// foreach (int i in Enumerable.Range(0, grades.Length))
 // {
-//     Console.WriteLine(i);
+//     if (grades[i] > 95) marks.Add("A+");
+//     else if (grades[i] > 90) marks.Add("A");
+//     else if (grades[i] > 85) marks.Add("B+");
+//     else if (grades[i] > 80) marks.Add("B");
+//     else if (grades[i] > 75) marks.Add("C+");
+//     else if (grades[i] > 70) marks.Add("C");
+//     else if (grades[i] > 65) marks.Add("D+");
+//     else if (grades[i] > 60) marks.Add("D");
+//     else if (grades[i] < 60) marks.Add("F");
+//     else marks.Add("?");
 // }
 
-// string[] names = { "Alex", "Eddie", "David", "Michael" };
-// for (int i = names.Length - 1; i >= 0; i--)
+// //Console.WriteLine($"Sophia's average: {sophiaTotal / gradesCount}, {marks[0]}");
+// //Console.WriteLine($"Andrew's average: {andrewTotal / gradesCount}, {marks[1]}");
+// //Console.WriteLine($"Emma's average: {emmaTotal / gradesCount}, {marks[2]}");
+// //Console.WriteLine($"Logan's average: {loganTotal / gradesCount}, {marks[3]}");
+
+// //===============================================
+
+// Random coin = new();
+// int flip = coin.Next(1,3);
+// Console.WriteLine((flip > 1) ? "Heads" : "Tails");  //ternary operator
+
+// //===============================================
+
+// // bool flag = true;
+// // int value;
+
+// // if (flag)
+// // {
+// //     value = 10;
+// //     //Console.WriteLine($"Inside the code block: {value}");
+// // }
+
+// // Console.WriteLine($"Outside the code block: {value}");
+
+// //===============================================
+
+// int[] numbers = { 4, 8, 15, 16, 23, 42 };
+// int total = 0;
+// foreach (int number in numbers)
 // {
-//     Console.WriteLine(names[i]);
+//     total += number;
 // }
 
-//===============================================
+// if(numbers.Contains(42)) Console.WriteLine("Set contains 42");
+// Console.WriteLine($"Total: {total}");
 
-// for(int i = 0; i<40; i++)
+// //===============================================
+
+// int employeeLevel = 200;
+// string employeeName = "John Smith";
+
+// string title = "";
+
+// switch (employeeLevel)
 // {
-//     if(i % 5 == 0 && i % 3 == 0) Console.WriteLine(" - fizzbuzz");
-
-//     else if(i%5 == 0) Console.WriteLine(" - buzz");
-
-//     else if(i%3 == 0) Console.WriteLine(" - fizz");
+//     case 100:
+//         title = "Junior Associate";
+//         break;
+//     case 200:
+//         title = "Senior Associate";
+//         break;
+//     case 300:
+//         title = "Manager";
+//         break;
+//     case 400:
+//         title = "Senior Manager";
+//         break;
+//     default:
+//         title = "Associate";
+//         break;
 // }
 
-//===============================================
+// Console.WriteLine($"{employeeName}, {title}");
 
-Random random = new Random();
-int current = 0;
+// //===============================================
 
-do
+// string sku = "01-MN-L";
+
+// string[] product = sku.Split('-');
+
+// string type = "";
+// string color = "";
+// string size = "";
+
+// switch(product[0])
+// {
+//     case "01":
+//         type = "Sweat shirt";
+//         break;
+//     case "02":
+//         type = "T-Shirt";
+//         break;
+//     case "03":
+//         type = "Sweat pants";
+//         break;
+//     default:
+//         type = "Other";
+//         break;
+// }
+
+// switch(product[1])
+// {
+//     case "BL":
+//         color = "Black";
+//         break;
+//     case "MN":
+//         color = "Maroon";
+//         break;
+//     default:
+//         color = "White";
+//         break;
+// }
+
+// switch(product[2])
+// {
+//     case "S":
+//         size = "Small";
+//         break;
+//     case "M":
+//         size = "Medium";
+//         break;
+//     case "L":
+//         size = "Large";
+//         break;
+//     default:
+//         size = "One Size Fits All";
+//         break;
+// }
+
+// // Console.WriteLine($"Product: {size} {color} {type}");
+
+// //===============================================
+
+// // for (int i = 0; i < 10; i++)
+// // {
+// //     Console.WriteLine(i);
+// // }
+
+// // string[] names = { "Alex", "Eddie", "David", "Michael" };
+// // for (int i = names.Length - 1; i >= 0; i--)
+// // {
+// //     Console.WriteLine(names[i]);
+// // }
+
+// //===============================================
+
+// // for(int i = 0; i<40; i++)
+// // {
+// //     if(i % 5 == 0 && i % 3 == 0) Console.WriteLine(" - fizzbuzz");
+
+// //     else if(i%5 == 0) Console.WriteLine(" - buzz");
+
+// //     else if(i%3 == 0) Console.WriteLine(" - fizz");
+// // }
+
+// //===============================================
+
+// Random random = new Random();
+// int current = 0;
+
+// do
+// {
+//     current = random.Next(1, 11);
+//     Console.WriteLine(current);
+// } while (current != 7); // keep logging until you hit 7
+
+// //===============================================
+
+// // the ourAnimals array will store the following: 
+// string animalSpecies = "";
+// string animalID = "";
+// string animalAge = "";
+// string animalPhysicalDescription = "";
+// string animalPersonalityDescription = "";
+// string animalNickname = "";
+
+// // variables that support data entry
+// int maxPets = 8;
+// string? readResult;
+// string menuSelection = "";
+
+// string[,] ourAnimals = new string[maxPets, 6]; //2d array
+
+// //===============================================
+
+// int[] data; // Declares a reference to an int array. The reference (not the array) is stored on the stack.
+// data = new int[3]; // Allocates the array (actual data) on the heap. The reference on the stack now points to it.
+
+// //===============================================
+
+// string first = "5";
+// string second = "7";
+// int sum = Convert.ToInt32(first) + int.Parse(second); // .Parse method to convert data types and Convert.ToInt32 to do the same
+// Console.WriteLine(sum);
+
+// //===============================================
+
+// // string value = "can't be a number";
+// // int result;
+
+// // bool success = int.TryParse(value, out result); // doesnt throw an error if value cant be converted to a number
+
+// // if (success)
+// // {
+// //     Console.WriteLine("Measurement: " + result);
+// // }
+// // else
+// // {
+// //     Console.WriteLine("Unable to report the measurement.");
+// // }
+
+// // if (result > 0)
+// // {
+// //     Console.WriteLine("Measurement (w/ offset): " + (50 + result));
+// // }
+
+// //===============================================
+
+string[] values = { "12.3", "45", "ABC", "11", "DEF" };
+decimal total = 0; string message = ""; decimal result;
+
+foreach(string value in values)
 {
-    current = random.Next(1, 11);
-    Console.WriteLine(current);
-} while (current != 7); // keep logging until you hit 7
+    bool success = decimal.TryParse(value, out result);
+
+    if(success) total+=result;
+    else message += value;
+};
+
+Console.WriteLine($"total: {total}");
+Console.WriteLine($"message: {message}");
 
 //===============================================
-
-// the ourAnimals array will store the following: 
-string animalSpecies = "";
-string animalID = "";
-string animalAge = "";
-string animalPhysicalDescription = "";
-string animalPersonalityDescription = "";
-string animalNickname = "";
-
-// variables that support data entry
-int maxPets = 8;
-string? readResult;
-string menuSelection = "";
-
-// array used to store runtime data, there is no persisted data
-string[,] ourAnimals = new string[maxPets, 6];
