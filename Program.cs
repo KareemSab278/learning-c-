@@ -355,59 +355,77 @@
 
 //===============================================           Arrays
 
-string[] pallets = [ "B14", "A11", "B12", "A13" ];
+// string[] pallets = [ "B14", "A11", "B12", "A13" ];
 
-Array.Sort(pallets);
-Array.Reverse(pallets);
+// Array.Sort(pallets);
+// Array.Reverse(pallets);
 // Console.WriteLine(String.Join(", ", pallets));
 
 //===============================================
 
-Array.Clear(pallets, 0, 1);
+// Array.Clear(pallets, 0, 1);
 // Console.WriteLine(String.Join(" ", pallets));
 
 //===============================================
 
 // Console.WriteLine(pallets.Length);
-Array.Resize(ref pallets, 6);   // changes the length of the array
+// Array.Resize(ref pallets, 6);   // changes the length of the array
 // Console.WriteLine(pallets.Length);
 
 //===============================================
 
-string sentence = "The quick brown fox jumps over the lazy dog"; // this was so f**king hard coming from js... apparently you CANT split by each individual charachter but have to put it into an array of char value types bruhhhhhhh;
-string[] words = sentence.Split(' ');
+// string sentence = "The quick brown fox jumps over the lazy dog"; // this was so f**king hard coming from js... apparently you CANT split by each individual charachter but have to put it into an array of char value types bruhhhhhhh;
+// string[] words = sentence.Split(' ');
 
-for (int i = 0; i < words.Length; i++) {
-    char[] chars = words[i].ToCharArray();
-    Array.Reverse(chars);
-    words[i] = new string(chars);
+// for (int i = 0; i < words.Length; i++) {
+//     char[] chars = words[i].ToCharArray();
+//     Array.Reverse(chars);
+//     words[i] = new string(chars);
+// }
+
+// Console.WriteLine(string.Join(" ", words));
+
+//===============================================
+
+// string first = "Hello";
+// string second = "World";
+// Console.WriteLine("{1} {0}!", first, second);
+// Console.WriteLine("{0} {0} {0}!", first, second); // yeah..... this can get confusing for some lol...
+
+//===============================================
+
+// Console.WriteLine(first.IndexOf("o"));  // find the index of an elem in the str;
+
+// string text = "Hello World";
+// string part = text.Substring(6); // writes right after elem 6
+// string shorterpart = text.Substring(6,3); // writes right after elem 6 + 2 more
+// Console.WriteLine(part);
+// Console.WriteLine(shorterpart);
+
+//===============================================
+
+// string message = "This--is--ex-amp-le--da-ta";
+// message = message.Replace("--", " ");
+// message = message.Replace("-", "");
+// Console.WriteLine(message);
+
+//===============================================
+
+string test = "  --i='m full of -bad stuff--.";
+test = test.Replace("=", "").Trim().Trim('-').Replace("-", "");
+// Console.WriteLine(test);
+
+//===============================================       Methods
+
+void Greet(string name, int age)
+{
+    Console.WriteLine($"Hi {name}, you are {age} years old."); // methods are pascal case
 }
 
-Console.WriteLine(string.Join(" ", words));
+Greet("Bob", 30);
 
 //===============================================
 
-string first = "Hello";
-string second = "World";
-Console.WriteLine("{1} {0}!", first, second);
-Console.WriteLine("{0} {0} {0}!", first, second); // yeah..... this can get confusing for some lol...
+// Math.Abs gives you the absolute value of a number
 
-//===============================================
-
-Console.WriteLine(first.IndexOf("o"));  // find the index of an elem in the str;
-
-string text = "Hello World";
-string part = text.Substring(6); // writes right after elem 6
-string shorterpart = text.Substring(6,3); // writes right after elem 6 + 2 more
-Console.WriteLine(part);
-Console.WriteLine(shorterpart);
-
-//===============================================
-
-string message = "This--is--ex-amp-le--da-ta";
-message = message.Replace("--", " ");
-message = message.Replace("-", "");
-Console.WriteLine(message);
-
-//===============================================
 
