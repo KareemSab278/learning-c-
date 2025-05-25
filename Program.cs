@@ -417,15 +417,52 @@ test = test.Replace("=", "").Trim().Trim('-').Replace("-", "");
 
 //===============================================       Methods
 
-void Greet(string name, int age)
-{
-    Console.WriteLine($"Hi {name}, you are {age} years old."); // methods are pascal case
-}
+// void Greet(string name, int age)
+// {
+//     Console.WriteLine($"Hi {name}, you are {age} years old."); // methods are pascal case
+// }
 
-Greet("Bob", 30);
+// Greet("Bob", 30);
 
 //===============================================
 
 // Math.Abs gives you the absolute value of a number
 
+// double total = 0;
+// double minimumSpend = 30.00;
+
+// double[] items = {15.97, 3.50, 12.25, 22.99, 10.98};
+// double[] discounts = {0.30, 0.00, 0.10, 0.20, 0.50};
+
+// Console.WriteLine($"Total: ${total}");
+
+// double GetDiscountedPrice(int itemIndex)
+// {
+//     return items[itemIndex] * (1 - discounts[itemIndex]); // so you cant use void Method if you are using return, only if you are printing the output.
+// }
+
+// bool TotalMeetsMinimum()
+// {
+//     return total >= minimumSpend;
+// }
+
+// string FormatDecimal(double input)
+// {
+//     return input.ToString().Substring(0, 5);
+// }
+
+//===============================================
+
+double usd = 23.73;
+double vnd = UsdToVnd(usd);
+
+Console.WriteLine($"${usd} USD = ${vnd} VND");
+
+double UsdToVnd(double usd) 
+{
+    double rate = 23500;
+    return (double) (rate * usd);
+}
+
+//===============================================
 
