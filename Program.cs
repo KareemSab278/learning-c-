@@ -456,7 +456,7 @@ test = test.Replace("=", "").Trim().Trim('-').Replace("-", "");
 double usd = 23.73;
 double vnd = UsdToVnd(usd);
 
-Console.WriteLine($"${usd} USD = ${vnd} VND");
+// Console.WriteLine($"${usd} USD = ${vnd} VND");
 
 double UsdToVnd(double usd) 
 {
@@ -465,4 +465,5 @@ double UsdToVnd(double usd)
 }
 
 //===============================================
+
 
