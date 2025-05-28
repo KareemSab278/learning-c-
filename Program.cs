@@ -1,4 +1,6 @@
-﻿// using System;
+﻿// See https://aka.ms/new-console-template for more information
+// Console.WriteLine("Hello, World!");
+// using System;
 
 // //Console.WriteLine("Hello, World!");
 // //===============================================
@@ -498,3 +500,114 @@ public class CropRatio
 }
 
 //===============================================
+
+// try
+// {
+//     int result = 10 / 0; // will throw an exception
+// }
+// catch (DivideByZeroException ex)
+// {
+//     Console.WriteLine("Error: Division by zero.");
+// }
+// finally
+// {
+//     Console.WriteLine("This runs no matter what.");
+// }
+
+//===============================================
+
+// try
+// {
+//     Process1();
+// }
+// catch
+// {
+//     Console.WriteLine("An exception has occurred");
+// }
+
+// Console.WriteLine("Exit program");
+
+// static void Process1()
+// {
+//     try
+//     {
+//         WriteMessage();
+//     }
+//     catch
+//     {
+//         Console.WriteLine("Exception caught in Process1");
+//     }
+
+// }
+
+// static void WriteMessage()
+// {
+//     double float1 = 3000.0;
+//     double float2 = 0.0;
+//     int number1 = 3000;
+//     int number2 = 0;
+
+//     Console.WriteLine(float1 / float2);
+//     Console.WriteLine(number1 / number2);
+// }
+
+//===============================================
+partial class Program{
+    static string MakeChange(int cost, int[] cashTill, int twenties, int tens = 0, int fives = 0, int ones = 0)
+{
+     string transactionMessage = "";
+
+        cashTill[3] += twenties;
+        cashTill[2] += tens;
+        cashTill[1] += fives;
+        cashTill[0] += ones;
+
+        int amountPaid = twenties * 20 + tens * 10 + fives * 5 + ones;
+        int changeNeeded = amountPaid - cost;
+
+    if (changeNeeded < 0)
+        transactionMessage = "Not enough money provided.";
+
+    Console.WriteLine("Cashier Returns:");
+
+    while ((changeNeeded > 19) && (cashTill[3] > 0))
+    {
+        cashTill[3]--;
+        changeNeeded -= 20;
+        Console.WriteLine("\t A twenty");
+    }
+
+    while ((changeNeeded > 9) && (cashTill[2] > 0))
+    {
+        cashTill[2]--;
+        changeNeeded -= 10;
+        Console.WriteLine("\t A ten");
+    }
+
+    while ((changeNeeded > 4) && (cashTill[1] > 0))
+    {
+        cashTill[1]--;
+        changeNeeded -= 5;
+        Console.WriteLine("\t A five");
+    }
+
+    while ((changeNeeded > 0) && (cashTill[0] > 0))
+    {
+        cashTill[0]--;
+        changeNeeded--;
+        Console.WriteLine("\t A one");
+    }
+
+    if (changeNeeded > 0)
+        transactionMessage = "Can't make change. Do you have anything smaller?";
+
+    if (transactionMessage == "")
+        transactionMessage = "transaction succeeded";
+
+    return transactionMessage;
+}
+} // cringe ahh code
+
+//===============================================
+
+// https://www.freecodecamp.org/certification/KareemSab278/foundational-c-sharp-with-microsoft
