@@ -466,4 +466,35 @@ double UsdToVnd(double usd)
 
 //===============================================
 
+public class CropRatio
+{
+    private int totalWeight = 0;
+    private Dictionary<string, int> crops = new Dictionary<string, int>();
 
+    public void Add(string name, int cropWeight)
+    {
+        if(!crops.ContainsKey(name)) crops[name]=0;
+        crops[name] += cropWeight;
+        totalWeight += cropWeight;
+    }
+
+
+    public double Proportion(string name)
+    {
+        if(!crops.ContainsKey(name)) return 0;
+        return (double)crops[name] / totalWeight;
+    }
+
+    public static void Main(string[] args)
+    {
+        CropRatio cropRatio = new CropRatio();
+
+        cropRatio.Add("Wheat", 4);
+        cropRatio.Add("Wheat", 5);
+        cropRatio.Add("Rice", 1);
+
+        Console.WriteLine("Ratio of wheat: {0}", cropRatio.Proportion("Wheat"));
+    }
+}
+
+//===============================================
