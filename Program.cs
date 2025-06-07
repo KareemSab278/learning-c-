@@ -413,8 +413,8 @@
 
 //===============================================
 
-string test = "  --i='m full of -bad stuff--.";
-test = test.Replace("=", "").Trim().Trim('-').Replace("-", "");
+// string test = "  --i='m full of -bad stuff--.";
+// test = test.Replace("=", "").Trim().Trim('-').Replace("-", "");
 // Console.WriteLine(test);
 
 //===============================================       Methods
@@ -455,49 +455,49 @@ test = test.Replace("=", "").Trim().Trim('-').Replace("-", "");
 
 //===============================================
 
-double usd = 23.73;
-double vnd = UsdToVnd(usd);
+// double usd = 23.73;
+// double vnd = UsdToVnd(usd);
 
-// Console.WriteLine($"${usd} USD = ${vnd} VND");
+// // Console.WriteLine($"${usd} USD = ${vnd} VND");
 
-double UsdToVnd(double usd) 
-{
-    double rate = 23500;
-    return (double) (rate * usd);
-}
+// double UsdToVnd(double usd) 
+// {
+//     double rate = 23500;
+//     return (double) (rate * usd);
+// }
 
 //===============================================
 
-public class CropRatio
-{
-    private int totalWeight = 0;
-    private Dictionary<string, int> crops = new Dictionary<string, int>();
+// public class CropRatio
+// {
+//     private int totalWeight = 0;
+//     private Dictionary<string, int> crops = new Dictionary<string, int>();
 
-    public void Add(string name, int cropWeight)
-    {
-        if(!crops.ContainsKey(name)) crops[name]=0;
-        crops[name] += cropWeight;
-        totalWeight += cropWeight;
-    }
+//     public void Add(string name, int cropWeight)
+//     {
+//         if(!crops.ContainsKey(name)) crops[name]=0;
+//         crops[name] += cropWeight;
+//         totalWeight += cropWeight;
+//     }
 
 
-    public double Proportion(string name)
-    {
-        if(!crops.ContainsKey(name)) return 0;
-        return (double)crops[name] / totalWeight;
-    }
+//     public double Proportion(string name)
+//     {
+//         if(!crops.ContainsKey(name)) return 0;
+//         return (double)crops[name] / totalWeight;
+//     }
 
-    public static void Main(string[] args)
-    {
-        CropRatio cropRatio = new CropRatio();
+//     public static void Main(string[] args)
+//     {
+//         CropRatio cropRatio = new CropRatio();
 
-        cropRatio.Add("Wheat", 4);
-        cropRatio.Add("Wheat", 5);
-        cropRatio.Add("Rice", 1);
+//         cropRatio.Add("Wheat", 4);
+//         cropRatio.Add("Wheat", 5);
+//         cropRatio.Add("Rice", 1);
 
-        Console.WriteLine("Ratio of wheat: {0}", cropRatio.Proportion("Wheat"));
-    }
-}
+//         Console.WriteLine("Ratio of wheat: {0}", cropRatio.Proportion("Wheat"));
+//     }
+// }
 
 //===============================================
 
@@ -552,62 +552,127 @@ public class CropRatio
 // }
 
 //===============================================
-partial class Program{
-    static string MakeChange(int cost, int[] cashTill, int twenties, int tens = 0, int fives = 0, int ones = 0)
-{
-     string transactionMessage = "";
+// partial class Program{
+//     static string MakeChange(int cost, int[] cashTill, int twenties, int tens = 0, int fives = 0, int ones = 0)
+// {
+//      string transactionMessage = "";
 
-        cashTill[3] += twenties;
-        cashTill[2] += tens;
-        cashTill[1] += fives;
-        cashTill[0] += ones;
+//         cashTill[3] += twenties;
+//         cashTill[2] += tens;
+//         cashTill[1] += fives;
+//         cashTill[0] += ones;
 
-        int amountPaid = twenties * 20 + tens * 10 + fives * 5 + ones;
-        int changeNeeded = amountPaid - cost;
+//         int amountPaid = twenties * 20 + tens * 10 + fives * 5 + ones;
+//         int changeNeeded = amountPaid - cost;
 
-    if (changeNeeded < 0)
-        transactionMessage = "Not enough money provided.";
+//     if (changeNeeded < 0)
+//         transactionMessage = "Not enough money provided.";
 
-    Console.WriteLine("Cashier Returns:");
+//     Console.WriteLine("Cashier Returns:");
 
-    while ((changeNeeded > 19) && (cashTill[3] > 0))
-    {
-        cashTill[3]--;
-        changeNeeded -= 20;
-        Console.WriteLine("\t A twenty");
-    }
+//     while ((changeNeeded > 19) && (cashTill[3] > 0))
+//     {
+//         cashTill[3]--;
+//         changeNeeded -= 20;
+//         Console.WriteLine("\t A twenty");
+//     }
 
-    while ((changeNeeded > 9) && (cashTill[2] > 0))
-    {
-        cashTill[2]--;
-        changeNeeded -= 10;
-        Console.WriteLine("\t A ten");
-    }
+//     while ((changeNeeded > 9) && (cashTill[2] > 0))
+//     {
+//         cashTill[2]--;
+//         changeNeeded -= 10;
+//         Console.WriteLine("\t A ten");
+//     }
 
-    while ((changeNeeded > 4) && (cashTill[1] > 0))
-    {
-        cashTill[1]--;
-        changeNeeded -= 5;
-        Console.WriteLine("\t A five");
-    }
+//     while ((changeNeeded > 4) && (cashTill[1] > 0))
+//     {
+//         cashTill[1]--;
+//         changeNeeded -= 5;
+//         Console.WriteLine("\t A five");
+//     }
 
-    while ((changeNeeded > 0) && (cashTill[0] > 0))
-    {
-        cashTill[0]--;
-        changeNeeded--;
-        Console.WriteLine("\t A one");
-    }
+//     while ((changeNeeded > 0) && (cashTill[0] > 0))
+//     {
+//         cashTill[0]--;
+//         changeNeeded--;
+//         Console.WriteLine("\t A one");
+//     }
 
-    if (changeNeeded > 0)
-        transactionMessage = "Can't make change. Do you have anything smaller?";
+//     if (changeNeeded > 0)
+//         transactionMessage = "Can't make change. Do you have anything smaller?";
 
-    if (transactionMessage == "")
-        transactionMessage = "transaction succeeded";
+//     if (transactionMessage == "")
+//         transactionMessage = "transaction succeeded";
 
-    return transactionMessage;
-}
-} // cringe ahh code
+//     return transactionMessage;
+// }
+// } // cringe ahh code
 
 //===============================================
 
 // https://www.freecodecamp.org/certification/KareemSab278/foundational-c-sharp-with-microsoft
+
+//===============================================
+
+// List<string> aList = new List<int>();
+
+//===============================================
+
+
+// Dictionary<int, string> firstDict = new Dictionary<int, string>
+// {
+//     {1, "one"},
+//     {2, "two"},
+//     {3, "three"},
+//     {4, "four"}
+// };
+
+// var searchedPair = firstDict.ElementAt(1);
+
+//===============================================
+
+// List<string> fruits = new List<string> { "apple", "banana", "apple", "orange", "banana", "apple" };
+// Dictionary<string, int> fruitDictionary = new Dictionary<string, int>();
+
+// for (int i = 0; i < fruits.Count; i++)
+// {
+//     if (fruitDictionary.ContainsKey(fruits[i]))
+//         fruitDictionary[fruits[i]]++;
+//     else
+//         fruitDictionary[fruits[i]] = 1;
+// }
+
+//===============================================
+
+// List<int> even = new List <int>();
+// List<int> odd = new List <int>();
+
+// for (int i = 0; i <= 20; i++)
+// {
+//     if (i % 2 == 0) even.Add(i);
+//     else odd.Add(i);
+// }
+// Console.WriteLine(string.Join(", ", even));
+// Console.WriteLine(string.Join(", ", odd));
+//===============================================
+
+int number = 7; int count = 5;
+
+// List <int> numbers = new List<int>();
+// for (int i = 1; i <= count; i++)
+// {
+//     numbers.Add(number * i);
+// };
+
+// System.Console.WriteLine(String.Join(", ", numbers));
+
+int[] output = new int[count];
+
+for(int i=1; i<=count; i++)
+{
+    output[i-1] = number * i;
+};
+
+foreach (int num in output) {
+    Console.Write($"{num} ");
+};
